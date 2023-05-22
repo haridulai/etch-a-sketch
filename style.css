@@ -12,15 +12,18 @@
 }
 
 .etch-a-sketch {
+  --square-count: 16;
+  --square-size: 25px;
+  --container-size: calc(var(--square-size) * var(--square-count));
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: var(--container-size);
+  height: var(--container-size);
 }
 
 .grid {
-  width: 25px;
-  height: 25px;
+  width: var(--square-size);
+  height: var(--square-size);
   background-color: #ccc;
   border: 1px solid #999;
   cursor: pointer;

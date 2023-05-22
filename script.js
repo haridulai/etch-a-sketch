@@ -8,6 +8,8 @@ btnSetGrid.addEventListener("click", askGridSize);
 function createGrid(size) {
   clearGrid();
 
+  container.style.cssText = `--square-count: ${size};`;
+
   for (let i = 0; i < size ** 2; i++) {
     const gridDiv = document.createElement("div");
     gridDiv.classList.add("grid");
