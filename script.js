@@ -2,8 +2,10 @@ console.log("Etch-a-Sketch");
 
 const container = document.querySelector(".etch-a-sketch");
 const btnSetGrid = document.querySelector(".btn-set-grid");
+const btnRefreshGrid = document.querySelector(".btn-refresh-grid");
 
 btnSetGrid.addEventListener("click", askGridSize);
+btnRefreshGrid.addEventListener("click", refreshGrid);
 
 function createGrid(size) {
   clearGrid();
@@ -21,6 +23,10 @@ function createGrid(size) {
 function clearGrid() {
   document.querySelectorAll(".grid").forEach((el) => el.remove());
 }
+
+function refreshGrid() {
+    document.querySelectorAll(".grid").forEach((el) => el.classList.remove("active"));
+  }
 
 function sketchCell() {
   this.classList.add("active");
